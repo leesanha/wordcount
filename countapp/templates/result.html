@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/result.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section class="result">
+        <div class="header">
+            <div class="text">
+                <h1>there are {{length}} words</h1>
+                <a href="{% url 'home' %}">replay</a>
+            </div>
+        </div>
+        
+        <div class="table">
+            <div class="width">
+                <div class="text">
+                    <h1><i class="fas fa-caret-right"></i>Your text</h1>
+                    {{fulltext}}
+                </div>
+                
+                <h1><i class="fas fa-caret-right"></i>Count of words</h1>
+                <button onClick="abc()">sort</button>
+                <div class="some">
+                    <table>
+                        <tr>
+                            <th>word</th>
+                            <th>count</th>
+                        </tr>
+                        {% for x,y in dictionary %}
+                            <tr>
+                                <td>{{x}}</td>
+                                <td>{{y}}</td>
+                            </tr>
+                        {% endfor %}
+
+                        
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="top-btn">
+        <div class="container">
+            <a id="MOVE_TOP_BTN" href="#"><i class="fas fa-angle-up"></i></a>
+        </div>
+    </section>
+
+    <script>
+        /*
+        $(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 500) {
+                    $('#MOVE_TOP_BTN').fadeIn();
+                } else {
+                    $('#MOVE_TOP_BTN').fadeOut();
+                }
+            });
+            
+            $("#MOVE_TOP_BTN").click(function() {
+                $('html, body').animate({
+                    scrollTop : 0
+                }, 400);
+                return false;
+            });
+        });
+        */
+    </script>
+    
+</body>
+
+{% load staticfiles %}
+<script src="{% static "" %}"></script>
+
+</html>

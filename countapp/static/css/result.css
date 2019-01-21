@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+}
+
+
+.result .header{
+    width: 100%;
+    min-height: 300px;
+    background: url(/static/images/2.jpeg);
+    background-position: center;
+    background-size:cover;
+    display:flex;
+    align-items: center;
+}
+
+.result .header .text{
+    margin-left: 50px;
+}
+
+.result .header .text h1{
+    font-size: 50px;
+    font-family: 'Courgette', cursive;
+    margin-bottom: 10px;
+}
+.result .header .text a{
+    transition: .5s;
+    padding: 2px 20px;
+    text-decoration: none;
+    color: #444;
+}
+
+.result .header .text a:hover{
+    transition: .5s;
+    color: #fff;
+    background:black;
+    border-radius: 10px;
+
+}
+.result .table{
+    display: flex;
+}
+
+.result .table .width{
+    width: 100%;
+}
+
+.result .table h1{
+    padding-left:10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 100px;
+}
+
+.result .table h1 i{
+    margin-right: 20px;
+}
+
+.result .table .some{
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width:768px){
+    .result .table{
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.result table{
+    width: 500px;
+    border-collapse: collapse;
+}
+.result table td,th{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.result table tr:nth-child(even){
+    background:#f2f2f2;
+}
+
+a#MOVE_TOP_BTN {
+    transition:.5s;
+    text-decoration: none;
+    display: none;
+    
+    background-color:white;
+    color:black;
+    height:40px;
+    width:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+a#MOVE_TOP_BTN:hover{
+    transition:.5s;
+    background:black;
+    color:white;
+    border-radius: 50%;
+}
+
+.top-btn .container{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right:auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+}
+
+.top-btn{
+    width: 100%;
+    position: fixed;
+    background-color:transparent;
+    height: 70px;
+    z-index: 999;
+    bottom:10px;
+}
+
+@media(max-width:767px){
+    .top-btn{
+        bottom:50px;
+    }
+}
+
+.move{
+    font-size:24px;
+    top:72px;
+    z-index:99;
+    position: absolute;
+    width: 700px;
+    height: 70px;
+    background-color: transparent;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode:both
+    
+}
+
+@keyframes move {
+    /* keyframe */
+    from {
+    left: 0;
+    }
+    /* keyframe */
+    to {
+    left: 250px;
+    }
+}
